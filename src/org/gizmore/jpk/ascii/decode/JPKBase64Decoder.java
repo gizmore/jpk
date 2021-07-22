@@ -4,8 +4,6 @@ import java.util.Base64;
 
 import org.gizmore.jpk.JPKMethod;
 
-import sun.misc.BASE64Decoder;
-
 public final class JPKBase64Decoder implements JPKMethod {
 
 	public String getName() { 
