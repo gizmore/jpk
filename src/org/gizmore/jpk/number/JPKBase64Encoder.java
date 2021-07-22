@@ -1,5 +1,7 @@
 package org.gizmore.jpk.number;
 
+import java.util.Base64;
+
 import org.gizmore.jpk.JPKMethod;
 import org.gizmore.jpk.input.JPKNumber;
 
@@ -40,7 +42,7 @@ public final class JPKBase64Encoder implements JPKMethod  {
 	public String execute(final String input) {
 		
 		try {
-			return new BASE64Encoder().encode(new JPKNumber().toByteArray(input));
+			return Base64.getEncoder().encode(input.getBytes()).toString();
 		}
 		catch (Exception e) {
 			return e.toString();

@@ -1,5 +1,7 @@
 package org.gizmore.jpk.ascii.decode;
 
+import java.util.Base64;
+
 import org.gizmore.jpk.JPKMethod;
 
 import sun.misc.BASE64Decoder;
@@ -39,7 +41,7 @@ public final class JPKBase64Decoder implements JPKMethod {
 	public String execute(final String input) {
 		
 		try {
-			final String back = new String(new BASE64Decoder().decodeBuffer(input));
+			final String back = new String(Base64.getDecoder().decode(input));
 			return back;
 		}
 		catch (Exception e) {
